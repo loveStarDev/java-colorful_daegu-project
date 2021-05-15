@@ -1,4 +1,4 @@
-package com.example.color;
+package com.ilutoo.colorfuldaegu;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;

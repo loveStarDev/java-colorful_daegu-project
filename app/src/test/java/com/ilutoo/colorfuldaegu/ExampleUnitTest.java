@@ -1,4 +1,4 @@
-package com.example.color;
+package com.ilutoo.colorfuldaegu;
 
 import org.junit.Test;
 

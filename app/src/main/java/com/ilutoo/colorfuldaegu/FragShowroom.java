@@ -1,4 +1,4 @@
-package com.example.color;
+package com.ilutoo.colorfuldaegu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,15 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragConcert extends Fragment {
+public class FragShowroom extends Fragment {
 
-    public static FragConcert newinstance(){
-        return new FragConcert();
+    public static FragShowroom newinstance(){
+        return new FragShowroom();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frag_concert, container, false);
+        return inflater.inflate(R.layout.frag_showroom, container, false);
     }
 }
