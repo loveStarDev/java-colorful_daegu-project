@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ilutoo.colorfuldaegu.Daegu_Festival_Notice;
 import com.ilutoo.colorfuldaegu.R;
 import com.ilutoo.colorfuldaegu.ui.login.LoginViewModel;
 import com.ilutoo.colorfuldaegu.ui.login.LoginViewModelFactory;
@@ -75,6 +77,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
+
+                    // 로그인 성공 --> DaeguFestivalNotice로 넘어감
+                    Intent intent = new Intent(getApplicationContext(), Daegu_Festival_Notice.class);
+                    startActivity(intent);
                 }
                 setResult(Activity.RESULT_OK);
 
@@ -118,8 +124,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                loginViewModel.login(usernameEditText.getText().toString(), passwordEditText.getText().toString());
             }
         });
     }
