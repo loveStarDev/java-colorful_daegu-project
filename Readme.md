@@ -9,3 +9,7 @@
 * FireBase를 활용한 Google 로그인   
 * KakaoTalk을 활용한 로그인   
 * Naver를 활용한 로그인   
+
+<h2> 기타 </h2>
+
+* 이메일링크: <ilutoo@naver.com>
